@@ -1,0 +1,61 @@
+﻿<%@ Master Language="VB" CodeFile="Main_MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Online Library Management System</title>
+    <link href="App_Themes/Theme_Data/style.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+		<div>
+			<div id="container">
+			<!-- header -->
+			<div id="header" style="background-color: #FFFFFF">
+				<div id="logo">
+					<a href="#"><img src="App_Themes/Theme_Data/logo.gif" alt=""/><br/>
+                    <br style="color: #FFFFFF"/> Online Library Management System </a>
+				</div>
+				<div id="head">
+					<ul>
+						<li><a href="#">O</a></li>
+						<li><a href="#">L</a></li>
+						<li><a href="#">S</a></li>
+					</ul>
+					<p> "To buy books would be a good thing, if we also could buy the time to read them....." </p>
+				</div>
+			</div>
+			<div id="main" style="color: #000000">
+				<div id="menu" style="color: #000000">
+					<ul>
+						<li><a href="Member_Home.aspx" style="color: #000000">Home</a></li>
+						<li><a href="AboutUs.aspx" style="color: #000000">About us</a></li>
+						<li><a href="Library_Books.aspx" style="color: #000000">Library Books</a></li>
+						<li><a href="ContactUs.aspx" style="color: #000000">Contacts Us</a></li>
+					</ul>
+					<h2> Benefit : </h2>
+					<p style="color: #000000">&quot;The Principal Benefit of the Online Library will be to supplement the formal education system by making knowledge available to anyone who can read and has access.&quot;</p>
+				</div>
+				<div id="text">
+					<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+					</asp:ContentPlaceHolder>
+				</div>
+			</div>
+			<%--Footer--%>
+			<div id="footer">
+			    <div id="left_footer">&nbsp</div>
+			    <div id="right_footer">
+				    <p> &nbsp;| <strong><a href="Admin_Login.aspx"> Administrator </a></strong></p>
+			    </div>
+			</div>
+<div id="bottom">
+    <div id="bottom_center"></div>
+</div>
+			</div>
+		</div>
+    </form>
+</body>
+</html>
