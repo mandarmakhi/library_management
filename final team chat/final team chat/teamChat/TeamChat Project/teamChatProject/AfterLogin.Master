@@ -1,0 +1,95 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AfterLogin.Master.cs" Inherits="teamChatProject.Site1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>teamChat | create.connect.chat</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script language="javascript" type="text/javascript">
+// <![CDATA[
+
+        function btnSearch_onclick() {
+
+        }
+
+// ]]>
+    </script>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="dvHeader" style="background-color: #000000; width: 100%; height: 50px; font-family: 'Kozuka Gothic Pro R'; font-size: large;
+         color: #C9C9C9; text-decoration: none; font-weight: bold;">
+        <div id="dvLogo" style="float: left">
+        <a href="Home.aspx" runat="server">
+            <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+            <asp:Image ID="imgLogo" runat="server" Align="left" Height="55px" 
+                ImageUrl="~/Images/logo.png" Width="125px" />
+        </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div id="dvLinks" style="float: right; margin-top: 6px; margin-right: 15px;">
+
+        <asp:TextBox ID="txtSearchBox" runat="server" BackColor="#333333" 
+            BorderColor="Black" BorderStyle="Solid" BorderWidth="2px" Font-Size="Large" 
+            ForeColor="Gray" Height="30px" Width="300px" 
+             Wrap="False"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <asp:ImageButton ID="btnSearch" runat="server" 
+            ImageUrl="~/Images/searchicon.png" onclick="btnSearch_Click" 
+            ImageAlign="AbsMiddle" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       
+        <asp:HyperLink ID="hplHome" runat="server" NavigateUrl="~/Home.aspx" style="background-color: #000000; width: 100%;
+                       height: 50px; font-family: 'Kozuka Gothic Pro R'; font-size: large; color: #C9C9C9; text-decoration: none; font-weight: bold;">Home
+        </asp:HyperLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <asp:HyperLink ID="hplDashboard" 
+            runat="server" NavigateUrl="~/Dashboard.aspx" style="background-color: #000000; width: 100%; height: 50px; 
+            font-family: 'Kozuka Gothic Pro R'; font-size: large; color: #C9C9C9; text-decoration: none; font-weight: bold;">Dashboard
+            </asp:HyperLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <asp:HyperLink ID="hplProfile" runat="server" NavigateUrl="~/Profile.aspx" style="background-color: #000000; width: 100%; height: 50px; 
+            font-family: 'Kozuka Gothic Pro R'; font-size: large; color: #C9C9C9; text-decoration: none; font-weight: bold;">Profile
+        </asp:HyperLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+        <asp:HyperLink ID="hplAccount" runat="server" NavigateUrl="~/Account.aspx" style="background-color: #000000; width: 100%; height: 50px;
+                      font-family: 'Kozuka Gothic Pro R'; font-size: large; color: #C9C9C9; text-decoration: none; font-weight: bold; margin-top: 5px;">Account
+        </asp:HyperLink>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      
+        <asp:ImageButton ID="btnLogout" runat="server" AlternateText="Logout" 
+            ImageAlign="AbsMiddle" ImageUrl="~/Images/logout.png" 
+            onclick="btnLogout_Click" style=" " />
+    </div>
+    </div><!--header closed-->
+    <div id="dvWelcomeUser" style="width: 100%; background-color: #EDF0F5">
+
+        <table class="style1">
+            <tr>
+                <td align="right">
+
+        <asp:Label ID="Label2" runat="server" Font-Names="Tahoma" Font-Size="Large" 
+                        ForeColor="#FF6600"></asp:Label>
+
+        <asp:Label ID="Label3" runat="server" Font-Size="Large" 
+            style="text-align: right" Font-Names="Tahoma" ForeColor="#333333">Welcome, </asp:Label>
+
+        <asp:Label ID="Label1" runat="server" Font-Size="Large" 
+            style="text-align: right" Font-Names="Tahoma" ForeColor="#333333"></asp:Label>
+
+                </td>
+            </tr>
+        </table>
+
+    </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
